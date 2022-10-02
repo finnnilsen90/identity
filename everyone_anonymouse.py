@@ -34,10 +34,10 @@ class something_nothing:
 
         return hashed
 
-    def match(self,hashed,data):
+    def match(self,hashed):
 
-        for i in range(len(data)):
-            email = data['Email'][i]
+        for i in range(len(self.data)):
+            email = self.data['Email'][i]
             if hash(email) == hashed:
                 return email
             
