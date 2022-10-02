@@ -15,7 +15,7 @@ The below CSV file is used to generate the FAKE PII. It is simply a list of baby
 'https://raw.githubusercontent.com/guipsamora/pandas_exercises/master/06_Stats/US_Baby_Names/US_Baby_Names_right.csv
 
 ##### Inputs
-The something_nothing() takes in a two inputs outlined below. 
+The something_nothing() class takes in two inputs outlined below. 
 - **data** The data input is the below data object. This object is intended to structure the data that will ultimately populate the object.
 data = {
             'First_Name': [],
