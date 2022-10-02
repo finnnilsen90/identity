@@ -5,13 +5,13 @@ import random
 names = pd.read_csv('https://raw.githubusercontent.com/guipsamora/pandas_exercises/master/06_Stats/US_Baby_Names/US_Baby_Names_right.csv')
 names = [i for i in names['Name']]
 
-# Make something from nothing. Generate a random dataset to represent data with PII.
+# Make something from nothing to test FAKE anonomyzed data. 
 class something_nothing:
 
     def __init__(self,data,nrows):
         self.data = data
-        self.nrows = nrows
-    
+        self.nrows = nrows+1
+    # Generate a random dataset to represent data with PII.
     def generate_data(self):
         data = self.data
 
@@ -25,21 +25,27 @@ class something_nothing:
 
         return data
 
+    # Hash emails.
     def hash(self):
 
-        arr = self.data['Email']
+        df = pd.DataFrame(self.data)
+        email_arr = [i for i in df['Email'][1:]]
         hashed = []
-        for i in arr:
-            hashed.append(hash(i))
+        for i in range(len(email_arr)):
+            hashed.append(hash(email_arr[i]))
 
         return hashed
 
+    # Search hashed emails.
     def match(self,hashed):
 
-        for i in range(len(self.data)):
-            email = self.data['Email'][i]
+        df = pd.DataFrame(self.data)
+        email_arr = [i for i in df['Email']]
+        for i in range(len(email_arr)):
+            email = email_arr[i]
             if hash(email) == hashed:
                 return email
+
             
 
 
