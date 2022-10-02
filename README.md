@@ -7,8 +7,8 @@ The below section lists out all of the custom modules used for the various excer
 ### everyone_anonymouse 
 The **everyone_anonymouse** module is used to store tools and methods for analyzing and modeling anonymouse datasets.
 
-#### something_nothing() 
-Class is used to generate fake PII data (not real people) using the below linked CSV of baby names. This class can also hash FAKE email addresses and lookup hashed values in the dataset.
+#### something_nothing class 
+This class is used to generate fake PII data (not real people) using the below linked CSV of baby names. This class can also hash FAKE email addresses and lookup hashed values in the dataset.
 
 ##### Names CSV
 The below CSV file is used to generate the FAKE PII. It is simply a list of baby names.
