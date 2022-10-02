@@ -45,12 +45,3 @@ class something_nothing:
             email = email_arr[i]
             if hash(email) == hashed:
                 return email
-
-            
-
-
-
-
-
-
-
