@@ -1,0 +1,275 @@
+Delivered-To: finn@mogointeractive.com
+Received: by 2002:a5d:4bd0:0:0:0:0:0 with SMTP id l16csp2174525wrt;
+        Mon, 2 Mar 2020 06:34:01 -0800 (PST)
+X-Received: by 2002:a1c:ddd7:: with SMTP id u206mr19542501wmg.164.1583159641425;
+        Mon, 02 Mar 2020 06:34:01 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1583159641; cv=none;
+        d=google.com; s=arc-20160816;
+        b=XPfCFbKWzDFYkXfuRHTNSK64ncGqG6F2FTBVdrUp6aEhU3O8CU82wCVeyaRTLpMec1
+         YC8uVhFyFdBDT0Ee3ItuO5vSCtPcxduRSmo7svo5kANqI1POBk0tbalYAZjBWC/cagGl
+         4GULRQU85D0eryff3CubEMrHF4N2KTO8nTa/ZR8g21T5ZKpltytDBSmGQQGUlJCV93al
+         jLLo0Ru4jmteF3hSIBCvWS1ChunTwAa5ld9ixSJCXiC1fZ1vfTATK7dSpmVO+N3gjUrN
+         ZWkPH4ICGP8UZEwHICwyN7KQRP6bbnMgskicCnbA1jxZJNJiUxyITDGH/o3itFJ3MQl7
+         7NTw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:content-language:accept-language:message-id:date
+         :thread-index:thread-topic:subject:to:from:dkim-signature;
+        bh=28joBugU/uGIGbky7iSM2PpebbYCBIR+OHFeKPCMXHs=;
+        b=DkkT8hHPIS4Z4krrXdemtG0B1KJxNENNK4Z9xqMSU4tWNUbYgBW1FN1DboBGgM7XQA
+         2QE8PVt2gM4Ym75ODHXeaFI+waOV0QY30b61Iy91MTvZ+FXGTmIKBU5HhEqW8+k5ytL7
+         XLAZPdTsbguUJlqEvKBsJDRQfDS9v8/ewvtDpiCbjrYESzSWZ9+DzCg2A7S4liFYI5QM
+         7krq3zDZFAViIz/2VdSYn/9zmp3bc8FmYPCTF9VesNlJ62ngpnP+JxdYZ6bOUNIZud5z
+         M50ny57bRJG2rpSnm9nb2PBaK74xpzEcPcG/Job8PFpUBt68v2k1Bx/3Qt5s6YGILXO0
+         MR0g==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=temperror (no key for signature) header.i=@mogointeractive.com header.s=google header.b=alApOAtk;
+       spf=pass (google.com: domain of kevin.reilly@mogointeractive.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=kevin.reilly@mogointeractive.com
+Return-Path: <kevin.reilly@mogointeractive.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id x2sor6220065wrv.34.2020.03.02.06.34.01
+        for <finn@mogointeractive.com>
+        (Google Transport Security);
+        Mon, 02 Mar 2020 06:34:01 -0800 (PST)
+Received-SPF: pass (google.com: domain of kevin.reilly@mogointeractive.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=temperror (no key for signature) header.i=@mogointeractive.com header.s=google header.b=alApOAtk;
+       spf=pass (google.com: domain of kevin.reilly@mogointeractive.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=kevin.reilly@mogointeractive.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=mogointeractive.com; s=google;
+        h=from:to:subject:thread-topic:thread-index:date:message-id
+         :accept-language:content-language:mime-version;
+        bh=28joBugU/uGIGbky7iSM2PpebbYCBIR+OHFeKPCMXHs=;
+        b=alApOAtkRvaIYvWPaZwgCXkabSMN0E+n4s1etdlJrDViScpqHqSkmWzpk4p0WmznfK
+         zcIq6Y98ZQbKPlIojQk1OuAIvN0ZZzimBkMEP5liM392EDL/0sv7sVxFKcUg+VBEWI4z
+         tvVSWzLEnh5K5nm1yU7VCuP07dzpIJxVHY72FZFDNfHD201ff59QPOejOLYQeQdbdSsZ
+         DV43ZzWFQRW5bSRidPnASctGCrL3Vm+oNn4eyAAXhLL7hiOZ5w7WFT7L8S+4d96vISR9
+         0x7HFjBXR+B6tqo2USbT9Z3yjBTohwAEjeK1b79xzCzUS+BIpCJ7FAsSFR509WxS0/o4
+         BEaA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:from:to:subject:thread-topic:thread-index:date
+         :message-id:accept-language:content-language:mime-version;
+        bh=28joBugU/uGIGbky7iSM2PpebbYCBIR+OHFeKPCMXHs=;
+        b=Fxi9vK4/Fxm/dqyHOmnDSLuwWSiRdOrhIHAWhcXR2lCDnos6MmwBrc65ZBU7bbotUI
+         /qct5jL5o40xC/DRVNWU/Zsheep7lZ0mfh+rmVk/ULmu4QORKndUa299fJf9Runf0ask
+         PxgEL5rQK3Ehtv8Owg15wnLajCE2n9JIgvwkoRBK5yaF0pehoraInnYP4f48bfT3GXUR
+         n5mNVMxaadiP87jpM+phts9oLurUvbOhvoWR6Qs49dA9nI0F4il25j00mO6ajfx5up86
+         Tj2at7fY7sbhp8dZAXBrf4TEA4K9t6BRnx/QsCKbpsCK4CRWX02w/fVRDzGLAj3v4yWr
+         Kmsw==
+X-Gm-Message-State: APjAAAW57gJguku4s2fwzzD3QrtCl+nSK3/pV2TrLh/6E4CqZUIteYm6
+	cmC6d1Wq3azVAlChjs9YPO8FLh3Crlj2rA==
+X-Google-Smtp-Source: APXvYqzhpDh3583GPetBgQZrMRPMTPS7uiZmY4FZnXxPUmrDe9opuquwpzvwbE5DrlaeUG+1AagU2g==
+X-Received: by 2002:adf:c445:: with SMTP id a5mr22629789wrg.14.1583159641150;
+        Mon, 02 Mar 2020 06:34:01 -0800 (PST)
+Return-Path: <kevin.reilly@mogointeractive.com>
+Received: from SN6PR14MB2461.namprd14.prod.outlook.com ([2603:1036:805:41::5])
+        by smtp.gmail.com with ESMTPSA id t3sm28482228wrx.38.2020.03.02.06.33.59
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 02 Mar 2020 06:34:00 -0800 (PST)
+From: Kevin Reilly <kevin.reilly@mogointeractive.com>
+To: Jonathon Hunt <jonathon@mogointeractive.com>, Finn Nilsen
+	<finn@mogointeractive.com>, Dhruv Gupta <dhruv@mogointeractive.com>
+Subject: Comcast Thought Experiment 
+Thread-Topic: Comcast Thought Experiment 
+Thread-Index: AQHV8J+a+4eHZ1fJZEakqbJ3WymTMA==
+X-MS-Exchange-MessageSentRepresentingType: 1
+Date: Mon, 2 Mar 2020 14:33:56 +0000
+Message-ID:
+	<SN6PR14MB24613C46B0E7F3A61819C514A5E70@SN6PR14MB2461.namprd14.prod.outlook.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-Exchange-Organization-SCL: -1
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: multipart/alternative;
+	boundary="_000_SN6PR14MB24613C46B0E7F3A61819C514A5E70SN6PR14MB2461namp_"
+MIME-Version: 1.0
+
+--_000_SN6PR14MB24613C46B0E7F3A61819C514A5E70SN6PR14MB2461namp_
+Content-Type: text/plain; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+Folks,
+
+I've been doing a bit of a thought experiment.  I'd love your thoughts on i=
+f it holds together.
+
+Comcast is interested in working with us for a customer loyalty program.  W=
+e have a strong relationship there through our investors.  As a first step,=
+ we compared our audiences to see how much of our Fan Graph overlapped with=
+ their households.
+
+In the test we did, LIMGC provided 42MM profiles from Krux.  Comcast found =
+that our IDs matched with 22% of their 28.2MM households.  The IDs were mat=
+ched through LiveRamp.
+
+Obviously, the higher the match rate, the better.  But nobody really knows =
+how to feel about the 22% number.  Is the overlap strong enough?  Is there =
+any reason to think something went wrong with matching?
+
+To try to answer this question, I wanted to figure out what the match rate =
+of a random audience might be.  Essentially, if you had two randomly genera=
+ted audience lists, how much overlap would there be?  To do this, I used a =
+random number generator to create two separate lists with the random number=
+ as a proxy for the audience IDs.  The random number generator picked uniqu=
+e numbers between 1 to 285MM (size of the US online population).  One list =
+was 42MM to represent LIMGC.  The other was 28.2MM to represent Comcast.  O=
+nce I had the two lists, I looked at the intersection between them.
+
+After running this a few times, I found that the overlap between the two li=
+sts was ~15% (using the pseudo-Comcast list as the denominator).
+
+My conclusion is that if you have two totally randomly determined audiences=
+ the same sizes as the LIMGC and Comcast audiences you should expect a 15% =
+overlap.  Since the overlap between the real audiences was 22%, the LIMGC a=
+nd Comcast audiences overlap 50% better than random.
+
+The real question is whether or not the 6.2MM household audience is large e=
+nough to build an interesting program.  But I think we should be reasonably=
+ satisfied that our audience overlap is interesting.
+
+This is the first time I=92ve thought of this issue in this way.  Does it w=
+ork?  I=92m trying to convince myself as much as anyone that this means any=
+thing so please poke any holes you see.
+
+Thanks,
+
+Kevin
+
+Kevin Reilly
+Chief Product Officer
+Mogo Interactive
+m. (917) 375-2168
+e. kevin.reilly@mogointeractive.com
+
+--_000_SN6PR14MB24613C46B0E7F3A61819C514A5E70SN6PR14MB2461namp_
+Content-Type: text/html; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns:w=3D"urn:sc=
+hemas-microsoft-com:office:word" xmlns:m=3D"http://schemas.microsoft.com/of=
+fice/2004/12/omml" xmlns=3D"http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DWindows-1=
+252">
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;}
+span.EmailStyle17
+	{mso-style-type:personal-compose;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+--></style>
+</head>
+<body lang=3D"EN-US" link=3D"#0563C1" vlink=3D"#954F72">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt">Folks,<o:p></o:p></=
+span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt"><o:p>&nbsp;</o:p></=
+span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt">I've been doing a b=
+it of a thought experiment.&nbsp; I'd love your thoughts on if it holds tog=
+ether.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt"><o:p>&nbsp;</o:p></=
+span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt">Comcast is interest=
+ed in working with us for a customer loyalty program.&nbsp; We have a stron=
+g relationship there through our investors.&nbsp; As a first step, we compa=
+red our audiences to see how much of our Fan Graph
+ overlapped with their households.&nbsp;&nbsp;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt"><o:p>&nbsp;</o:p></=
+span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt">In the test we did,=
+ LIMGC provided 42MM profiles from Krux.&nbsp; Comcast found that our IDs m=
+atched with 22% of their 28.2MM households.&nbsp; The IDs were matched thro=
+ugh LiveRamp.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt"><o:p>&nbsp;</o:p></=
+span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt">Obviously, the high=
+er the match rate, the better.&nbsp; But nobody really knows how to feel ab=
+out the 22% number.&nbsp; Is the overlap strong enough?&nbsp; Is there any =
+reason to think something went wrong with matching?<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt"><o:p>&nbsp;</o:p></=
+span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt">To try to answer th=
+is question, I wanted to figure out what the match rate of a random audienc=
+e might be.&nbsp; Essentially, if you had two randomly generated audience l=
+ists, how much overlap would there be?&nbsp; To
+ do this, I used a random number generator to create two separate lists wit=
+h the random number as a proxy for the audience IDs.&nbsp; The random numbe=
+r generator picked unique numbers between 1 to 285MM (size of the US online=
+ population).&nbsp; One list was 42MM to represent
+ LIMGC.&nbsp; The other was 28.2MM to represent Comcast.&nbsp; Once I had t=
+he two lists, I looked at the intersection between them.<o:p></o:p></span><=
+/p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt"><o:p>&nbsp;</o:p></=
+span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt">After running this =
+a few times, I found that the overlap between the two lists was ~15% (using=
+ the pseudo-Comcast list as the denominator).<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt"><o:p>&nbsp;</o:p></=
+span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt">My conclusion is th=
+at if you have two totally randomly determined audiences the same sizes as =
+the LIMGC and Comcast audiences you should expect a 15% overlap.&nbsp; Sinc=
+e the overlap between the real audiences
+ was 22%, the LIMGC and Comcast audiences overlap 50% better than random.<o=
+:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt"><o:p>&nbsp;</o:p></=
+span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt">The real question i=
+s whether or not the 6.2MM household audience is large enough to build an i=
+nteresting program.&nbsp; But I think we should be reasonably satisfied tha=
+t our audience overlap is interesting.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt"><o:p>&nbsp;</o:p></=
+span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt">This is the first t=
+ime I=92ve thought of this issue in this way.&nbsp; Does it work?&nbsp; I=
+=92m trying to convince myself as much as anyone that this means anything s=
+o please poke any holes you see.&nbsp;&nbsp;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt"><o:p>&nbsp;</o:p></=
+span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt">Thanks,<o:p></o:p><=
+/span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt"><o:p>&nbsp;</o:p></=
+span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt">Kevin<o:p></o:p></s=
+pan></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt"><o:p>&nbsp;</o:p></=
+span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;color:black">Kevin R=
+eilly <o:p>
+</o:p></span></p>
+<p class=3D"MsoNormal"><i><span style=3D"font-size:11.0pt;color:black">Chie=
+f Product Officer<o:p></o:p></span></i></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:11.0pt;color:black">Mogo=
+ Interactive<o:p></o:p></span></b></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;color:black">m. (917=
+) 375-2168<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;color:black">e. kevi=
+n.reilly@mogointeractive.com</span><o:p></o:p></p>
+</div>
+</body>
+</html>
+
+--_000_SN6PR14MB24613C46B0E7F3A61819C514A5E70SN6PR14MB2461namp_--
