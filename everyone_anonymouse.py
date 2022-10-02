@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import random
 
+# CSV file of baby names to create FAKE PII.
 names = pd.read_csv('https://raw.githubusercontent.com/guipsamora/pandas_exercises/master/06_Stats/US_Baby_Names/US_Baby_Names_right.csv')
 names = [i for i in names['Name']]
 
