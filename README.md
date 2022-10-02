@@ -12,7 +12,7 @@ This class is used to generate fake PII data (not real people) using the below l
 
 ##### Names CSV
 The below CSV file is used to generate the FAKE PII. It is simply a list of baby names.
-'https://raw.githubusercontent.com/guipsamora/pandas_exercises/master/06_Stats/US_Baby_Names/US_Baby_Names_right.csv
+https://raw.githubusercontent.com/guipsamora/pandas_exercises/master/06_Stats/US_Baby_Names/US_Baby_Names_right.csv
 
 ##### Inputs
 The something_nothing() class takes in two inputs outlined below. 
