@@ -4,10 +4,10 @@ With the browser cookie being sunset in the next 2 years (if Google ever really 
 ## Custom Modules
 The below section lists out all of the custom modules used for the various excercizes and analysis.
 
-### everyone_anonymouse 
-The **everyone_anonymouse** module is used to store tools and methods for analyzing and modeling anonymouse datasets.
+### everyone_anonymous 
+The **everyone_anonymous** module is used to store tools and methods for analyzing and modeling anonymous datasets.
 
-#### [something_nothing](https://github.com/finnnilsen90/identity/blob/main/everyone_anonymouse.py) class 
+#### [something_nothing](https://github.com/finnnilsen90/identity/blob/main/everyone_anonymous.py) class 
 This class is used to generate fake PII data (not real people) using the below linked CSV of baby names. This class can also hash FAKE email addresses and lookup hashed values in the dataset.
 
 ##### Names CSV
