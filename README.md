@@ -7,7 +7,7 @@ The below section lists out all of the custom modules used for the various excer
 ### everyone_anonymouse 
 The **everyone_anonymouse** module is used to store tools and methods for analyzing and modeling anonymouse datasets.
 
-#### something_nothing class 
+#### [something_nothing](https://github.com/finnnilsen90/identity/blob/main/everyone_anonymouse.py) class 
 This class is used to generate fake PII data (not real people) using the below linked CSV of baby names. This class can also hash FAKE email addresses and lookup hashed values in the dataset.
 
 ##### Names CSV
@@ -33,7 +33,7 @@ data = {
 ## Thought Experiments
 When thinking of ways to anonymously identify users on the internet one of the most important questions to answer is how is scale going to be impacted? The goal of thess thought experiments is to model different hypothetical scenarios and build tools to better answer business questions on this topic.
 
-### [general_thought_experiment](https://github.com/finnnilsen90/identity/blob/main/everyone_anonymouse.py)
+### [general_thought_experiment](https://github.com/finnnilsen90/identity/blob/main/general_thought_experiment.ipynb)
 A dataset with PII from a large company called Finn Corp is hashed utilizing the email address. These hashed emails are utilized by the DSP to identify users that login to a publishers website. Determine the scale when targeting those hashed email addresses by answering the following business questions.
 
 #### Supply Side Business Questions
