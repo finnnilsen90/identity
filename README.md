@@ -28,12 +28,12 @@ data = {
 ##### Functions
 - **something_nothing(data,nrows).generate_data()** generates the fake PII data.
 - **something_nothing(data,nrows).hash()** hashes the emails and returns an array of hashed values.
-- **something_nothing(data,nrows).match(hashed)** takes in a hashed value and looks it up against the PII dataset.
+- **something_nothing(data,nrows).match(hashed)** takes in a hashed value and looks it up against the PII dataset. It returns the email that was originally hashed.
 
 ## Thought Experiments
-When thinking of ways to anonymously identify users on the internet one of the most important questions to answer is how is scale going to be impacted? The goal of this thought experiment is to model what the hypothetical reach and frequency of targeting an anonymized audience would be.
+When thinking of ways to anonymously identify users on the internet one of the most important questions to answer is how is scale going to be impacted? The goal of thess thought experiments is to model different hypothetical scenarios and build tools to better answer business questions on this topic.
 
-### general_though_experiment
+### general_thought_experiment
 A dataset with PII from a large company called Finn Corp is hashed utilizing the email address. These hashed emails are utilized by the DSP to identify users that login to a publishers website. Determine the scale when targeting those hashed email addresses by answering the following business questions.
 
 #### Supply Side Business Questions
