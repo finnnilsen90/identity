@@ -12,7 +12,7 @@ This class is used to generate fake PII data (not real people) using the below l
 
 ##### Names CSV
 The below CSV file is used to generate the FAKE PII. It is simply a list of baby names.
-'https://raw.githubusercontent.com/guipsamora/pandas_exercises/master/06_Stats/US_Baby_Names/US_Baby_Names_right.csv
+https://raw.githubusercontent.com/guipsamora/pandas_exercises/master/06_Stats/US_Baby_Names/US_Baby_Names_right.csv
 
 ##### Inputs
 The something_nothing() class takes in two inputs outlined below. 
@@ -33,7 +33,7 @@ data = {
 ## Thought Experiments
 When thinking of ways to anonymously identify users on the internet one of the most important questions to answer is how is scale going to be impacted? The goal of thess thought experiments is to model different hypothetical scenarios and build tools to better answer business questions on this topic.
 
-### general_thought_experiment
+### [general_thought_experiment](https://github.com/finnnilsen90/identity/blob/main/everyone_anonymouse.py)
 A dataset with PII from a large company called Finn Corp is hashed utilizing the email address. These hashed emails are utilized by the DSP to identify users that login to a publishers website. Determine the scale when targeting those hashed email addresses by answering the following business questions.
 
 #### Supply Side Business Questions
