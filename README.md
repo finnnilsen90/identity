@@ -34,7 +34,7 @@ data = {
 When thinking of ways to anonymously identify users on the internet one of the most important questions to answer is how is scale going to be impacted? The goal of thess thought experiments is to model different hypothetical scenarios and build tools to better answer business questions on this topic.
 
 ## [general_thought_experiment](https://github.com/finnnilsen90/identity/blob/main/general_thought_experiment.ipynb)
-A 100,000 user dataset with PII from a large company called Finn Corp is hashed utilizing the email address. These hashed emails are utilized by the DSP to identify users that login to a publishers website. Determine the scale when targeting those hashed email addresses in a $5,000 display campaign. It is known that 50% of users login to a publisher's website and 20% of those logged in are in our dataset.
+A 100,000 user dataset with PII from a company called Finn Corp is hashed utilizing the email address. These hashed emails are used by the DSP to identify users that login to a publishers website. Determine the scale when targeting those hashed email addresses in a $5,000 display campaign.
 
 ### Supply Side Business Questions
 - What percent of users login to a publisher website?
