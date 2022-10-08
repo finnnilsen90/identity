@@ -49,7 +49,7 @@ Used to build on existing datasets. One example usecase is to create a dataset w
 # Thought Experiments
 When thinking of ways to anonymously identify users on the internet one of the most important questions to answer is how is scale going to be impacted? The goal of thess thought experiments is to model different hypothetical scenarios and build tools to better answer business questions on this topic.
 
-## [general_thought_experiment](https://github.com/finnnilsen90/identity/blob/identity_v1.1/general_thought_expriment.ipynb)
+## [general_thought_experiment](https://github.com/finnnilsen90/identity/blob/identity_v1.1/general_thought_experiment.ipynb)
 A 100,000-user dataset with PII from a company called Finn Corp is hashed utilizing the email address. These hashed emails are used by the DSP to identify users that login to a publisher’s website. Determine the scale when targeting those hashed email addresses in a $5,000 display campaign.
 
 ### Supply Side Business Questions
