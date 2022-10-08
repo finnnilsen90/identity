@@ -49,7 +49,7 @@ Used to build on existing datasets. One example usecase is to create a dataset w
 # Thought Experiments
 When thinking of ways to anonymously identify users on the internet one of the most important questions to answer is how is scale going to be impacted? The goal of thess thought experiments is to model different hypothetical scenarios and build tools to better answer business questions on this topic.
 
-## [general_thought_experiment](https://github.com/finnnilsen90/identity/blob/identity_v1.1/overlap_thought_expriment.ipynb)
+## [general_thought_experiment](https://github.com/finnnilsen90/identity/blob/identity_v1.1/general_thought_expriment.ipynb)
 A 100,000-user dataset with PII from a company called Finn Corp is hashed utilizing the email address. These hashed emails are used by the DSP to identify users that login to a publisher’s website. Determine the scale when targeting those hashed email addresses in a $5,000 display campaign.
 
 ### Supply Side Business Questions
@@ -59,7 +59,7 @@ A 100,000-user dataset with PII from a company called Finn Corp is hashed utiliz
 - What is the frequency per hashed email over the lifetime of a 30-day digital campaign?
 - How much is spent to reach the matched emails with a 4-dollar CPM?
 
-## [overlap_thought_expriment]()
+## [overlap_thought_expriment](https://github.com/finnnilsen90/identity/blob/identity_v1.1/overlap_thought_expriment.ipynb)
 A 100,000-user dataset with PII from a company called Finn Corp is compared to a 500,000 dataset with PII that includes demographic data. The goal of this overlap analysis is to first see what the % overlap is and second define demographic information.
 
 ### Business Questions
