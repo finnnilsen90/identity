@@ -11,7 +11,7 @@ The approach this repo takes is to mimic real-world conditions when identifying 
 The below section lists out all of the custom modules used for the various exercises and analysis.
 
 ## everyone_anonymous 
-The **everyone_anonymous** module is used to store tools and methods for analyzing and modeling anonymous datasets.
+The **everyone_anonymous** module is used to store tools and methods for building, analyzing, and modeling anonymous datasets.
 
 ### [something_nothing](https://github.com/finnnilsen90/identity/blob/main/everyone_anonymous.py) class 
 This class is used to generate fake PII data (not real people) using the below linked CSV of baby names. This class can also hash FAKE email addresses and lookup hashed values in the dataset.
@@ -36,10 +36,20 @@ data = {
 - **something_nothing(data,nrows).hash()** hashes the emails and returns an array of hashed values.
 - **something_nothing(data,nrows).match(hashed)** takes in a hashed value and looks it up against the PII dataset. It returns the email that was originally hashed.
 
+### [add_something](https://github.com/finnnilsen90/identity/blob/main/everyone_anonymous.py) class 
+Used to build on existing datasets. One example usecase is to create a dataset with the **something_nothing** classes generate_data() function and add PII to that dataset.
+
+#### Inputs
+- **data** This is going to be an already formed data object.
+- **nrows** The number of rows in the dataset.
+
+#### Functions
+- **add_demo_data(gender=True,age=True,hhi=True,gender_scew=50,age_min=18,age_max=80,hhi_scew=800000)** adds demo data to the dataset.
+
 # Thought Experiments
 When thinking of ways to anonymously identify users on the internet one of the most important questions to answer is how is scale going to be impacted? The goal of thess thought experiments is to model different hypothetical scenarios and build tools to better answer business questions on this topic.
 
-## [general_thought_experiment](https://github.com/finnnilsen90/identity/blob/main/general_thought_experiment.ipynb)
+## [general_thought_experiment](https://github.com/finnnilsen90/identity/blob/identity_v1.1/overlap_thought_expriment.ipynb)
 A 100,000-user dataset with PII from a company called Finn Corp is hashed utilizing the email address. These hashed emails are used by the DSP to identify users that login to a publisher’s website. Determine the scale when targeting those hashed email addresses in a $5,000 display campaign.
 
 ### Supply Side Business Questions
