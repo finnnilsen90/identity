@@ -68,7 +68,7 @@ class something_nothing:
             hhi = '\$100,001 - $200,000'
         elif rand_hhi >= 200001 and rand_hhi < 500000:
             hhi = '\$200,001 - $500,000'
-        elif rand_hhi > 500000:
+        else:
             hhi = 'More than $500,000'
 
         demo_obj = {
